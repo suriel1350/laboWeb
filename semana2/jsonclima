@@ -1,0 +1,47 @@
+{
+	"coord":
+	{
+		"lon":-98.2,
+		"lat":19.04
+	},
+	"weather":
+	[
+		{
+			"id":800,
+			"main":"Clear",
+			"description":"clear sky",
+			"icon":"01n"
+		}
+	],
+	"base":"stations",
+	"main":
+	{
+		"temp":277.042,
+		"pressure":768.58,
+		"humidity":85,
+		"temp_min":277.042,
+		"temp_max":277.042,
+		"sea_level":1030.8,
+		"grnd_level":768.58
+	},
+	"wind":
+	{
+		"speed":0.71,
+		"deg":40.0006
+	},
+	"clouds":
+	{
+		"all":0
+	},
+	"dt":1516772760,
+	"sys":
+	{
+		"message":0.0032,
+		"country":"MX",
+		"sunrise":1516799317,
+		"sunset":1516839694
+	},
+	"id":3521081,
+	"name":"Puebla de Zaragoza",
+	"cod":200
+}
