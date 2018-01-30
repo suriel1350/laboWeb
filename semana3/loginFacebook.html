@@ -3,6 +3,9 @@
 <head>
 <title>Facebook Login JavaScript Example</title>
 <meta charset="UTF-8">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/bootstrap/css/style.css">
 </head>
 <body>
 
@@ -87,13 +90,44 @@
   Below we include the Login Button social plugin. This button uses
   the JavaScript SDK to present a graphical Login button that triggers
   the FB.login() function when clicked.
--->
+
 
 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button>
 
 <div id="status">
 </div>
+-->
+<div class="container">
+    
+
+    <div class="omb_login">
+      <h3 class="omb_authTitle">Iniciar <a href="#">Sesión</a></h3>
+    <div class="row omb_row-sm-offset-3 omb_socialButtons">
+        <div class="col-xs-12 col-sm-6">
+          <a href="#" class="btn btn-lg btn-block omb_btn-facebook">
+            <i class="fa fa-facebook visible-xs"></i>
+            <span class="hidden-xs">
+              <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+              </fb:login-button>
+              <div id="status">
+              </div>
+            </span>
+          </a>
+        </div> 
+    </div>
+
+    <div class="row omb_row-sm-offset-3 omb_loginOr">
+      <div class="col-xs-12 col-sm-6">
+        <hr class="omb_hrOr">        
+      </div>
+    </div>
+
+  </div>
+
+
+
+        </div>
 
 </body>
 </html>
