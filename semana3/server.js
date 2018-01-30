@@ -15,6 +15,10 @@ app.get('/', function(req, res){
 	res.sendfile('loginFacebook.html');
 });
 
+app.get('/carrito', function(req, res) {
+ res.sendfile('shoppingcar.html');
+});
+
 route(app, /^\/(assets|jscolor-2.0.4)\/(.*)/, './');
 
 app.listen(PORT);
