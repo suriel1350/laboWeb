@@ -160,12 +160,13 @@ google.maps.event.addDomListener(window, 'load', init);
     {
         //alert("obteniendo clima ...");
 
-        var lat = 19.0433;
-        var lng = -98.2019;
+        var mylat = document.getElementById('lat').value;
+        var mylng = document.getElementById('lng').value; 
+
         var apiKey =  "be8d7908731ba4e186e5a9befa87cc8b" //"2af72ef62258728d72777bef612f2a3e";
 
       $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat=" + 
-        lat + "&lon=" + lng + "&appid=" + apiKey, function(data) 
+        mylat + "&lon=" + mylng + "&appid=" + apiKey, function(data) 
         {
 
             //var texto = (JSON.stringify(data.coord));
