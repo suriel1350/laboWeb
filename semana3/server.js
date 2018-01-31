@@ -19,7 +19,7 @@ app.get('/carrito', function(req, res) {
  res.sendfile('shoppingcar.html');
 });
 
-route(app, /^\/(assets|jscolor-2.0.4)\/(.*)/, './');
+route(app, /^\/(assets|dist|img)\/(.*)/, './');
 
 app.listen(PORT);
 console.log('Running on port ' + PORT);
