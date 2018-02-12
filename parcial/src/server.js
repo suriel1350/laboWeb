@@ -23,6 +23,10 @@ app.get('/google2399103e46b25864.html', function(req, res) {
  res.sendfile('google2399103e46b25864.html');
 });
 
+app.get('/mapa', function(req, res) {
+ res.sendfile('indexCliente.html');
+});
+
 route(app, /^\/(assets|dist|img|jscolor-2.0.4)\/(.*)/, './');
 
 app.listen(PORT);
