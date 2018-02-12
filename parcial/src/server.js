@@ -23,7 +23,7 @@ app.get('/google2399103e46b25864.html', function(req, res) {
  res.sendfile('google2399103e46b25864.html');
 });
 
-route(app, /^\/(assets|dist|img)\/(.*)/, './');
+route(app, /^\/(assets|dist|img|jscolor-2.0.4)\/(.*)/, './');
 
 app.listen(PORT);
 console.log('Running on port ' + PORT);
