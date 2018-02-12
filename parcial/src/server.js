@@ -19,6 +19,10 @@ app.get('/carrito', function(req, res) {
  res.sendfile('shoppingcar.html');
 });
 
+app.get('/google2399103e46b25864.html', function(req, res) {
+ res.sendfile('google2399103e46b25864.html');
+});
+
 route(app, /^\/(assets|dist|img)\/(.*)/, './');
 
 app.listen(PORT);
