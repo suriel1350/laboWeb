@@ -91,9 +91,9 @@ google.maps.event.addDomListener(window, 'load', init);
             
             var message = "Tec de Mty";
           
-                var pinColor = document.getElementById('colorMarcador').value;
-                var charColor = document.getElementById('colorCaracter').value;
-                var mensajeColor = document.getElementById('colorMensaje').value;
+                var pinColor = "AB2567";
+                var charColor = "14AB74";
+                var mensajeColor = "14AB74";
                 charColor = "#"+charColor;
                 mensColor = "#"+mensajeColor;
                 

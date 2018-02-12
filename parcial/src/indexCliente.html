@@ -39,8 +39,9 @@
 <div class="container">
 <!--Contact Starts-->
   <div class="container contactform center">
-    <h3 class="text-center  wowload fadeInUp">Menú</h3>
+    <h3 class="text-center  wowload fadeInUp">Ubicación de la empresa</h3>
   
+    <div class="col-sm-12 wowload fadeInLeft">           
         <div class="col-sm-3 wowload fadeInLeft">
           <h4> Latitud </h4> 
           <input name="fecha" id="lat" type="text" size="10"/>                   
@@ -51,38 +52,27 @@
           <input name="fecha" id="lng" type="text" size="10"/>
         </div>              
 
-        <div class="col-sm-2 wowload fadeInLeft">
-          <h4> Color Marcador </h4>          
-          <input id="colorMarcador" onchange="drawMarker()" class="jscolor" value="ab2567">
-        </div>  
+        <div class="col-sm-6 wowload fadeInLeft">         
 
-        <div class="col-sm-2 wowload fadeInLeft">
-          <h4> Color caracter </h4>          
-          <input id="colorCaracter" onchange="drawMarker()" class="jscolor" value="14ab74">
-        </div>    
-
-        <div class="col-sm-2 wowload fadeInLeft">
-          <h4> Color Mensaje </h4>          
-          <input id="colorMensaje" onchange="drawMarker()" class="jscolor" value="14ab74">
-        </div>     
+          <div class="col-sm-6 wowload fadeInLeft">
+            <h4> </h4>          
+            <input type="button" value="Obtener Clima" onclick="obtenerClima()"/>                  
+          </div>  
+          <div class="col-sm-6 wowload fadeInLeft">
+            <h4> </h4>          
+            <a href="/carrito"><input type="button" value="Productos"/></a>                  
+          </div>  
+        </div>
+    </div>
   
+  <div class="col-sm-12 wowload fadeInLeft">           
     <div class="col-sm-6 wowload fadeInLeft">
       <div id="map"></div>
     </div>
-
     <div class="col-sm-6 wowload fadeInLeft">
-        <div class="col-sm-6 wowload fadeInLeft">
-          <h4> </h4>          
-          <input type="button" value="Obtener Direccion" onclick="obtenerDireccion()"/>
-          <h2 id="direccion" class="text-center"></h2>
-        </div>        
-
-        <div class="col-sm-6 wowload fadeInLeft">
-          <h4> </h4>          
-          <input type="button" value="Obtener Clima" onclick="obtenerClima()"/>
-          <h2 id="clima" class="text-center"></h2>          
-        </div>  
+      <h2 id="clima"></h2>
     </div>
+  </div>
 
   </div>
 
