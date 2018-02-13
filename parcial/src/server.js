@@ -27,6 +27,10 @@ app.get('/mapa', function(req, res) {
  res.sendfile('indexCliente.html');
 });
 
+app.get('/youtube', function(req, res) {
+ res.sendfile('youtube.html');
+});
+
 route(app, /^\/(assets|dist|img|jscolor-2.0.4)\/(.*)/, './');
 
 app.listen(PORT);
