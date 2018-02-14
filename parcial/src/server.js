@@ -12,7 +12,7 @@ var PORT=8087;
 
 var app=express();
 app.get('/', function(req, res){
-	res.sendfile('loginFacebook.html');
+	res.sendfile('indexCliente.html');
 });
 
 app.get('/carrito', function(req, res) {
