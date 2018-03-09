@@ -1,0 +1,39 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 1pt}
+\setlength{\headheight}{13.6pt}
+\newcommand\question[2]{\vspace{.25in}\hrule\textbf{#1: #2}\vspace{.5em}\hrule\vspace{.10in}}
+\renewcommand\part[1]{\vspace{.10in}\textbf{(#1)}}
+\newcommand\algorithm{\vspace{.10in}\textbf{Instrucciones: }}
+\newcommand\correctness{\vspace{.10in}\textbf{Valor: }}
+\pagestyle{fancyplain}
+\lhead{\textbf{\NAME\ (\ADSOFTID)}}
+\chead{\textbf{HW\HWNUM}}
+\rhead{LabWeb2018, \today}
+\begin{document}\raggedright
+
+\newcommand\NAME{Adolfo Centeno}  
+\newcommand\ADSOFTID{adsoft}     
+\newcommand\HWNUM{6}              
+
+\question{1}{Sepomex - REST API} 
+
+\part{a} \algorithm  Crear una rest api para sepomex que permita: listar estados, municipios por estado, colonias por municipio y estado.
+
+\correctness 50 pts.
+
+
+\question{2}{CRUD - Vue} 
+
+\part{a} \algorithm  Codificar un CRUD para productos usando la REST API products y vue
+
+\correctness 50 pts.
+
+
+\end{document}

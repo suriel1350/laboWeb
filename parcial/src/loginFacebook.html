@@ -15,6 +15,14 @@
 <body>
 
 <script>
+  function onSignIn(googleUser) {
+    var profile = googleUser.getBasicProfile();
+    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log('Name: ' + profile.getName());
+    console.log('Image URL: ' + profile.getImageUrl());
+    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+    window.location.href = 'http://35.197.9.28:8080';    
+  }
   // This is called with the results from from FB.getLoginStatus(). //313025512036-u4b7fmi9p8h3astr1cq49vmic7gt7s5f.apps.googleusercontent.com
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
@@ -87,7 +95,7 @@
       
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
-      window.location.href = '/carrito';
+      window.location.href = 'http://35.197.9.28:8080';
     });
   }
 </script>
@@ -120,7 +128,7 @@
               </div>              
             </span>
           </a>
-          <div class="g-signin2" data-onsuccess="onSignIn">H</div>
+          <div class="g-signin2" data-onsuccess="onSignIn"></div>
         </div> 
     </div>
 

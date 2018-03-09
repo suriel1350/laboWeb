@@ -1,0 +1,283 @@
+% Author: Adolfo Centeno 
+% Kubeet Corp
+% www.kubeet.com
+
+ 
+\documentclass{beamer}
+\setbeamertemplate{navigation symbols}{}
+\usepackage[utf8]{inputenc}
+\usepackage{beamerthemeshadow}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\begin{document}
+\title{Lab web - Vue.js }  
+\author{Adolfo Centeno Tellez}
+\date{\today} 
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}\frametitle{Table of contents}\tableofcontents
+\end{frame} 
+
+\section{Docker}
+ 
+\defverbatim[colored]\lstupdatenodejs{
+ \begin{lstlisting}[language=python,showstringspaces=false, basicstyle={\tiny}, keywordstyle=\color{red}]
+$ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - 
+$ sudo apt-get update
+$ sudo apt-get install -y nodejs
+ \end{lstlisting}
+}
+
+
+
+\defverbatim[colored]\lstinstallyarn{
+ \begin{lstlisting}[language=python,showstringspaces=false, basicstyle={\tiny}, keywordstyle=\color{red}]
+$ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+$ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee 
+        /etc/apt/sources.list.d/yarn.list
+$ sudo apt-get update && sudo apt-get install yarn
+ \end{lstlisting}
+}
+
+
+
+\defverbatim[colored]\lstvuehelloworld{
+ \begin{lstlisting}[language=python,showstringspaces=false, basicstyle={\tiny}, keywordstyle=\color{red}]
+ $ cd w6/hello-vue
+ $ nano package.json
+ $ yarn install 
+ $ more app.js
+ $ more index.html
+ $ yarn run dev
+ \end{lstlisting}
+}
+
+
+\defverbatim[colored]\lstinstallvue{
+ \begin{lstlisting}[language=python,showstringspaces=false, basicstyle={\tiny}, keywordstyle=\color{red}]
+
+ $ sudo yarn global add @vue/cli
+ $ vue create HelloWorld
+ $ cd HelloWorld
+ $ yarn serve
+ 
+
+ \end{lstlisting}
+}
+
+
+
+
+\defverbatim[colored]\lstnuxt{
+ \begin{lstlisting}[language=python,showstringspaces=false, basicstyle={\tiny}, keywordstyle=\color{red}]
+ $ sudo yarn global add create-nuxt-app
+ $ create-nuxt-app Nuxt-HelloWorld
+ $ cd Nuxt-HelloWorld
+ $ yarn run dev
+
+  To build & start for production:
+ $  yarn run build
+ $  yarn start
+
+ \end{lstlisting}
+}
+
+
+\defverbatim[colored]\lstpokemon{
+ \begin{lstlisting}[language=python,showstringspaces=false, basicstyle={\tiny}, keywordstyle=\color{red}]
+
+ $ git clone https://github.com/RN3r1/nuxtPokemonExample.git
+ $ cd nuxtPokemonExample
+ # install dependencies
+ $ yarn install
+
+ # serve with hot reload at localhost:3000
+ $ yarn run dev
+
+ # build for production and launch server
+ $ yarn run build
+ $ yarn start
+
+ # generate static project
+ $ yarn run generate
+\end{lstlisting}
+}
+
+
+\defverbatim[colored]\lstpokemondocker{
+ \begin{lstlisting}[language=python,showstringspaces=false, basicstyle={\tiny}, keywordstyle=\color{red}]
+$ git clone https://github.com/RN3r1/DockerNuxtPokemonExample.git
+# install dependencies
+$ yarn install
+
+# serve with hot reload at localhost:3000
+$ yarn run dev
+
+# build for production and launch server
+$ yarn run build
+$ yarn start
+
+# generate static project
+$ yarn run generate
+
+# generate Docker image
+$ sudo docker build . -t <USER_HUB_DOCKER>/pokemon
+
+# run Docker image
+$ sudo docker run -p 80:3000 --name pokemon-container <USER_HUB_DOCKER>/pokemon
+\end{lstlisting}
+}
+
+\defverbatim[colored]\lstpokemonhub{
+ \begin{lstlisting}[language=python,showstringspaces=false, basicstyle={\tiny}, keywordstyle=\color{red}]
+# start container
+$ sudo docker start pokemon-container
+
+# list containers
+$ sudo docker container ls -a
+
+# inspect the container
+$ sudo docker inspect pokemon-container
+
+# connect to container
+$ sudo docker exec -it pokemon-container bash
+
+# stop the container
+$ sudo docker stop pokemon-container
+
+$ sudo docker login
+
+# push your image to Docker Cloud
+$ sudo docker push <USER_HUB_DOCKER>/pokemon
+
+# remove container
+$ sudo docker rm <USER_HUB_DOCKER>/pokemon
+\end{lstlisting}
+}
+
+
+\begin{frame}\frametitle{Vue.js} 
+ Activities:
+\begin{enumerate}
+\item
+  Update nodejs, install yarn
+\item
+  vue - Hello world 
+\item
+  vuecli - Hello world 
+\item    
+  nuxt - HelloWorld
+\item  
+  Pokemon project
+\item  
+  Pokemon on Docker
+
+\end{enumerate}
+
+\end{frame}
+
+
+\subsection{Update nodejs} 
+\begin{frame}\frametitle{Update Nodejs} 
+ 
+\begin{block}{Update nodejs}
+  \lstupdatenodejs
+\end{block}
+
+\begin{block}{install yarn}
+  \lstinstallyarn
+\end{block}
+
+\end{frame}
+
+
+
+\subsection{Vue HelloWorld} 
+\begin{frame}\frametitle{Vue.js - HelloWorld} 
+ 
+ \url{https://vuejs.org/}
+
+
+\begin{center}
+\includegraphics[width=0.6\textwidth]{frontend.png}
+\end{center}
+\end{frame}
+
+
+\subsection{Vue HelloWorld} 
+\begin{frame}\frametitle{Vue.js - HelloWorld} 
+
+Code Time !
+
+\begin{block}{Vue HelloWorld}
+  \lstvuehelloworld
+\end{block}
+
+Watch 		 WHY VUE.JS ? in
+\url{https://vuejs.org/}
+ and code !
+\end{frame}
+
+
+\subsection{Install vue-cli} 
+\begin{frame}\frametitle{HelloWorld} 
+ 
+\begin{block}{vue-cli - HelloWorld}
+  \lstinstallvue
+\end{block}
+
+\end{frame}
+
+
+\subsection{Install nuxt - Pokemon} 
+\begin{frame}\frametitle{Install nuxt \& SSR} 
+\begin{center}
+\includegraphics[width=0.3\textwidth]{nuxt.png}
+\end{center}
+
+\url{https://nuxtjs.org/}
+  
+\begin{block}{nuxt \& SSR}
+  \lstnuxt
+\end{block}
+
+\end{frame}
+
+
+
+\subsection{Pokemon project} 
+\begin{frame}\frametitle{Pokemon project} 
+
+Client for Pokemon REST API
+  
+\begin{block}{nuxt}
+  \lstpokemon
+\end{block}
+
+\end{frame}
+
+
+\subsection{Pokemon - Docker} 
+\begin{frame}\frametitle{Pokemon - Docker} 
+
+Pokemon project running on Docker
+  
+\begin{block}{Running container}
+  \lstpokemondocker
+\end{block}
+
+\end{frame}
+
+\begin{frame}\frametitle{Pokemon - Cloud Docker} 
+\begin{block}{Push to Hub Docker \& more ...}
+  \lstpokemonhub
+\end{block}
+
+\end{frame}
+
+
+\end{document}
