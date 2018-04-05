@@ -15,6 +15,8 @@ import { ProyectoDetallesComponent } from './components/detalles-proyecto.compon
 import { MiembroAddComponent } from './components/add-miembro.component'; 
 import { RegistrarMiembroComponent } from './components/registrar-miembro.component';
 import { ProjectUpdateComponent } from './components/proyecto-update.component';
+import { MiembrosGetComponent } from './components/miembros-list.component';
+import { MiembroEditComponent } from './components/miembros-edit.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { ProjectUpdateComponent } from './components/proyecto-update.component';
     ProyectoDetallesComponent,
     MiembroAddComponent,
     RegistrarMiembroComponent,
-    ProjectUpdateComponent
+    ProjectUpdateComponent,
+    MiembrosGetComponent,
+    MiembroEditComponent
   ],
   imports: [
     BrowserModule,

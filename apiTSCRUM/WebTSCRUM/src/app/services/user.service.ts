@@ -49,6 +49,19 @@ export class UserService{
 		return this._http.put(this.url+'update-user/'+user_to_update.id, params, {headers: headers}).map(res => res.json());	
 	}
 
+	updateMiembro(token, id, user_to_update){
+		user_to_update.password = '';
+
+		let params = JSON.stringify(user_to_update);
+
+		let headers = new Headers({
+				'Content-Type':'application/json',
+				'Authorization': token
+			});
+
+		return this._http.put(this.url+'update-user/'+id, params, {headers: headers}).map(res => res.json());	
+	}
+
 	updatePassword(user_to_update){		
 		user_to_update.matricula = '';
 

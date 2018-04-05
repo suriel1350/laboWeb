@@ -11,6 +11,8 @@ import { ProyectoDetallesComponent } from './components/detalles-proyecto.compon
 import { MiembroAddComponent } from './components/add-miembro.component';
 import { RegistrarMiembroComponent } from './components/registrar-miembro.component';
 import { ProjectUpdateComponent } from './components/proyecto-update.component';
+import { MiembrosGetComponent } from './components/miembros-list.component';
+import { MiembroEditComponent } from './components/miembros-edit.component';
  
 const appRoutes: Routes = [
 	{path: '', component: HomeComponent},
@@ -23,6 +25,8 @@ const appRoutes: Routes = [
 	{path: 'agregar-miembro/:idProject', component: MiembroAddComponent},
 	{path: 'update-project/:idProject', component: ProjectUpdateComponent},
 	{path: 'registrar-miembro/:idUser', component: RegistrarMiembroComponent},
+	{path: 'editar-miembro/:idUser', component: MiembroEditComponent},
+	{path: 'ver-miembros', component: MiembrosGetComponent},
 	{path: '**', component: HomeComponent},
 ];
 

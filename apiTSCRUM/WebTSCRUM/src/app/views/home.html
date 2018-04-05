@@ -6,6 +6,7 @@
 			<a class="btn btn-primary btn-lg" [routerLink]="['/mis-proyectos',identity.id]" role="button">Ver mis proyectos</a> 
 			<a class="btn btn-primary btn-lg" [routerLink]="['/proyecto/crear/',identity.id]" role="button">Crear Proyecto</a> 
 			<a *ngIf="identity.role == 'ROLE_ADMIN'" class="btn btn-primary btn-lg" [routerLink]="['/registrar-miembro/',identity.id]" role="button">Agregar Usuario</a>
+			<a *ngIf="identity.role == 'ROLE_ADMIN'" class="btn btn-primary btn-lg" [routerLink]="['/ver-miembros']" role="button">Ver Miembros</a>
 		</p>
 	</div>
 </div>
