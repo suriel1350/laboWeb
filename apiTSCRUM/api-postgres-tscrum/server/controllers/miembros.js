@@ -214,7 +214,8 @@ function updateUser(req, res){
 								        .update({					          	
 								          	matricula: params.matricula.toUpperCase() || user.matricula,
 									        nombre: params.nombre || user.nombre,
-									        carrera: params.carrera || user.carrera,						        
+									        carrera: params.carrera || user.carrera,
+									        role: params.role || user.role,						        
 									        password: pass,
 								        })
 								        .then(() => {
@@ -245,6 +246,7 @@ function updateUser(req, res){
 							          	matricula: params.matricula.toUpperCase() || user.matricula,
 								        nombre: params.nombre || user.nombre,
 								        carrera: params.carrera || user.carrera,
+								        role: params.role || user.role,
 							        })
 							        .then(() => {
 							        	res.status(200).send(user)			        	
@@ -261,7 +263,7 @@ function updateUser(req, res){
 				}
 
 			}else{
-				res.status(200).send({message: 'El miembro ya existe'});				
+				res.status(404).send({message: 'El miembro ya existe'});				
 			}
 		})
 		.catch(error => res.status(400).send(error));
@@ -283,7 +285,8 @@ function updateUser(req, res){
 								        .update({					          	
 								          	
 									        nombre: params.nombre || user.nombre,
-									        carrera: params.carrera || user.carrera,						        
+									        carrera: params.carrera || user.carrera,	
+									        role: params.role || user.role,					        
 									        password: pass,
 								        })
 								        .then(() => {
@@ -314,6 +317,7 @@ function updateUser(req, res){
 							          	
 								        nombre: params.nombre || user.nombre,
 								        carrera: params.carrera || user.carrera,
+								        role: params.role || user.role,
 							        })
 							        .then(() => {
 							        	res.status(200).send(user)			        	
